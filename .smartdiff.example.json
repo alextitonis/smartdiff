@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "AI Code Review Configuration",
+  "provider": "openai",
+  "model": "gpt-4",
+  "focus": ["bugs", "security", "performance"],
+  "output": "terminal",
+  "providers": {
+    "openai": {
+      "apiKey": "your-api-key-here"
+    },
+    "anthropic": {
+      "apiKey": "your-api-key-here"
+    }
+  }
+}

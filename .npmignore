@@ -1,0 +1,22 @@
+# Source files (only ship dist/)
+src/
+tsconfig.json
+*.ts
+!*.d.ts
+
+# Development files
+.git/
+.github/
+node_modules/
+*.log
+.DS_Store
+
+# Documentation that's not needed in package
+CONTRIBUTING.md
+TECHNICAL_COFOUNDER.md
+.smartdiff.example.json
+
+# Config files
+.gitignore
+.prettierrc
+.eslintrc
