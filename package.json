@@ -1,6 +1,6 @@
 {
   "name": "@alextoti/smartdiff",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AI-powered code review CLI tool with GitHub integration, pre-commit hooks, and multi-provider support",
   "main": "dist/index.js",
   "bin": {
