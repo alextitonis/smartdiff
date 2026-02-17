@@ -14,8 +14,8 @@ Thank you for your interest in contributing! This document provides guidelines f
 
 ```bash
 # Clone your fork
-git clone https://github.com/yourusername/ai-code-review.git
-cd ai-code-review
+git clone https://github.com/alextitonis/smartdiff.git
+cd smartdiff
 
 # Install dependencies
 npm install

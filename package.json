@@ -1,5 +1,5 @@
 {
-  "name": "smartdiff",
+  "name": "@alextoti/smartdiff",
   "version": "1.0.0",
   "description": "AI-powered code review CLI tool with GitHub integration, pre-commit hooks, and multi-provider support",
   "main": "dist/index.js",
@@ -57,10 +57,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/smartdiff.git"
+    "url": "https://github.com/alextitonis/smartdiff.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/smartdiff/issues"
+    "url": "https://github.com/alextitonis/smartdiff/issues"
   },
-  "homepage": "https://github.com/yourusername/smartdiff#readme"
+  "homepage": "https://github.com/alextitonis/smartdiff#readme"
 }

@@ -6,7 +6,7 @@
 
 ```bash
 # Clone and setup
-git clone https://github.com/yourusername/smartdiff.git
+git clone https://github.com/alextitonis/smartdiff.git
 cd smartdiff
 npm install
 

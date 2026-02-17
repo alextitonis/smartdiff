@@ -2,7 +2,7 @@
 
 > AI-powered code review for your git changes - catch bugs, security issues, and get improvement suggestions automatically.
 
-[![npm version](https://badge.fury.io/js/smartdiff.svg)](https://www.npmjs.com/package/smartdiff)
+[![npm version](https://badge.fury.io/js/%40alextoti%2Fsmartdiff.svg)](https://www.npmjs.com/package/@alextoti/smartdiff)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
@@ -24,10 +24,10 @@
 
 ```bash
 # Install globally via npm
-npm install -g smartdiff
+npm install -g @alextoti/smartdiff
 
 # Or use npx (no installation needed)
-npx smartdiff
+npx @alextoti/smartdiff
 ```
 
 ---
@@ -246,7 +246,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - run: npm install -g smartdiff
+      - run: npm install -g @alextoti/smartdiff
       - run: smartdiff config --set-key=openai:${{ secrets.OPENAI_API_KEY }}
       - run: smartdiff --diff=origin/main..HEAD --fail-on=critical,high
 ```
@@ -256,7 +256,7 @@ jobs:
 ```yaml
 code_review:
   script:
-    - npm install -g smartdiff
+    - npm install -g @alextoti/smartdiff
     - smartdiff config --set-key=openai:$OPENAI_API_KEY
     - smartdiff --diff=main..HEAD --fail-on=critical,high
   only:
@@ -393,7 +393,7 @@ smartdiff pr 123 --token=ghp_your_token_here
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/smartdiff.git
+git clone https://github.com/alextitonis/smartdiff.git
 cd smartdiff
 
 # Install dependencies
@@ -466,7 +466,7 @@ npm login
 npm publish
 
 # 4. Test the published package
-npx smartdiff@latest --version
+npx @alextoti/smartdiff@latest --version
 ```
 
 ## 🤝 Contributing
@@ -502,9 +502,9 @@ Built with:
 
 ## 📞 Support
 
-- 🐛 [Report a bug](https://github.com/yourusername/smartdiff/issues)
-- 💬 [Ask a question](https://github.com/yourusername/smartdiff/discussions)
-- ⭐ [Star on GitHub](https://github.com/yourusername/smartdiff)
+- 🐛 [Report a bug](https://github.com/alextitonis/smartdiff/issues)
+- 💬 [Ask a question](https://github.com/alextitonis/smartdiff/discussions)
+- ⭐ [Star on GitHub](https://github.com/alextitonis/smartdiff)
 
 ---
 
