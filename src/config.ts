@@ -53,17 +53,22 @@ export async function loadConfig(cliOptions: Partial<Config> = {}): Promise<Conf
   const globalConfig = await loadGlobalConfig();
   const projectConfig = await loadProjectConfig();
 
+  // Filter out undefined values from cliOptions to prevent overwriting
+  const cleanCliOptions = Object.fromEntries(
+    Object.entries(cliOptions).filter(([_, v]) => v !== undefined)
+  );
+
   const merged = {
     ...DEFAULT_CONFIG,
     ...globalConfig,
     ...projectConfig,
-    ...cliOptions,
+    ...cleanCliOptions,
     // Merge providers separately to avoid overwriting
     providers: {
       ...DEFAULT_CONFIG.providers,
       ...globalConfig.providers,
       ...projectConfig.providers,
-      ...cliOptions.providers,
+      ...(cliOptions.providers || {}),
     }
   };
 
@@ -75,7 +80,7 @@ export async function loadConfig(cliOptions: Partial<Config> = {}): Promise<Conf
  */
 function validateConfig(config: Partial<Config>): Config {
   // Check if config is completely empty - user needs to run init
-  if (!config.provider && !config.providers?.openai && !config.providers?.anthropic) {
+  if (!config.provider && !config.providers?.openai && !config.providers?.anthropic && !config.providers?.openrouter && !config.providers?.ollama) {
     throw new Error('Configuration not found. Run "smartdiff init" to set up your API keys and preferences.');
   }
 
